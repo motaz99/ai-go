@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
 /* Global Styles */
 * {
     margin: 0;
@@ -6,38 +9,149 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    background-color: #F8FAFC;
 }
 
 /* Navigation Bar Styles */
 .navbar {
-    background-color: #333;
-    padding: 1rem;
+    background-color: #FFFFFF;
+    padding: 20px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
 }
 
 .logo a {
-    color: white;
+    color: #0F172A;
     text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    font-family: 'Inter', sans-serif;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
 }
 
 .nav-links li a {
-    color: white;
+    color: #0F172A;
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
     transition: color 0.3s ease;
+    display: block;
+    padding: 8px 0;
 }
 
 .nav-links li a:hover {
-    color: #00ff00;
+    color: #0F766E;
+}
+
+.nav-links li a.active {
+    color: #0F766E;
+    position: relative;
+}
+
+.nav-links li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #0F766E;
+    border-radius: 16px;
+}
+
+/* Responsive Media Queries */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 16px 24px;
+    }
+
+    .nav-links {
+        gap: 24px;
+    }
+
+    .nav-links li a {
+        font-size: 15px;
+    }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 16px 20px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        padding: 10px 0;
+    }
 }
