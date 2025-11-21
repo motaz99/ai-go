@@ -22,7 +22,93 @@
         </ul>
     </nav>
 
-    <!-- We add our content here guys -->
+    <div class="container">
+        <section class="blog-hero">
+            <h1 class="section-title">AI & Automation Insights</h1>
+            <p class="section-sub">Discover the latest trends, tips, and best practices in automation and AI technology</p>
+        </section>
+
+        <section class="blog-articles">
+            <article class="blog-card">
+                <div class="blog-header">
+                    <div class="blog-category">Automation</div>
+                    <span class="blog-date">Nov 20, 2025</span>
+                </div>
+                <h2 class="blog-title">How Automation is Transforming Business Operations</h2>
+                <p class="blog-excerpt">Discover how intelligent automation can streamline your workflows, reduce costs, and boost productivity. Learn practical strategies for implementing automation in your organization.</p>
+                <div class="blog-footer">
+                    <span class="blog-author">By Sarah Johnson</span>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-header">
+                    <div class="blog-category">AI Technology</div>
+                    <span class="blog-date">Nov 18, 2025</span>
+                </div>
+                <h2 class="blog-title">The Future of AI Assistants in Daily Life</h2>
+                <p class="blog-excerpt">Explore how AI assistants are evolving to become more intuitive and helpful. From personal productivity to customer service, see where AI is making the biggest impact.</p>
+                <div class="blog-footer">
+                    <span class="blog-author">By Michael Chen</span>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-header">
+                    <div class="blog-category">Best Practices</div>
+                    <span class="blog-date">Nov 15, 2025</span>
+                </div>
+                <h2 class="blog-title">5 Tips for Implementing Automation Successfully</h2>
+                <p class="blog-excerpt">Learn essential best practices for implementing automation in your workflow. From planning to execution, we cover everything you need to know for a smooth transition.</p>
+                <div class="blog-footer">
+                    <span class="blog-author">By Emma Rodriguez</span>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-header">
+                    <div class="blog-category">Case Study</div>
+                    <span class="blog-date">Nov 12, 2025</span>
+                </div>
+                <h2 class="blog-title">Case Study: 300% ROI Through Smart Automation</h2>
+                <p class="blog-excerpt">See how a leading tech company achieved remarkable results by implementing AI-powered automation. Real numbers, real impact, and practical lessons you can apply.</p>
+                <div class="blog-footer">
+                    <span class="blog-author">By David Kim</span>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-header">
+                    <div class="blog-category">Tips & Tricks</div>
+                    <span class="blog-date">Nov 10, 2025</span>
+                </div>
+                <h2 class="blog-title">Maximizing Productivity with AI Tools</h2>
+                <p class="blog-excerpt">Unlock the full potential of AI tools with these insider tips. Learn advanced techniques to automate complex tasks and save hours every week.</p>
+                <div class="blog-footer">
+                    <span class="blog-author">By Lisa Anderson</span>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-header">
+                    <div class="blog-category">News</div>
+                    <span class="blog-date">Nov 8, 2025</span>
+                </div>
+                <h2 class="blog-title">Latest AI Breakthroughs and Industry Updates</h2>
+                <p class="blog-excerpt">Stay informed about the latest developments in artificial intelligence and automation. This month's biggest announcements from industry leaders and innovators.</p>
+                <div class="blog-footer">
+                    <span class="blog-author">By James Wilson</span>
+                    <a href="#" class="blog-link">Read More →</a>
+                </div>
+            </article>
+        </section>
+    </div>
+
      <footer>
         <div class="footer-content">
             <div class="footer-section footer-logo">
@@ -62,6 +148,27 @@
         </div>
      </footer>
 
+    <!-- Blog Modal -->
+    <div id="blogModal" class="blog-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            
+            <div class="modal-header">
+                <div class="modal-meta">
+                    <span id="modalCategory" class="modal-category"></span>
+                    <span id="modalDate" class="modal-date"></span>
+                </div>
+                <h1 id="modalTitle" class="modal-title"></h1>
+                <p id="modalAuthor" class="modal-author"></p>
+            </div>
+            
+            <div class="modal-body">
+                <p id="modalContent" class="modal-text"></p>
+            </div>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
+    <script src="js/blog.js"></script>
 </body>
 </html>

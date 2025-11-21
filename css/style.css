@@ -297,6 +297,292 @@ it is a combination of flex-grow, flex-shrink and flex-basis
     height: 20px;
 }
 
+/* ========== BLOG PAGE STYLES ========== */
+.blog-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.blog-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.blog-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+.blog-category {
+    background: #F0FFFE;
+    color: #0F766E;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.blog-date {
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.blog-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0F172A;
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
+.blog-excerpt {
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+.blog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.blog-author {
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.blog-link {
+    color: #14B8A6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.blog-link:hover {
+    color: #0F766E;
+}
+
+/* ========== BLOG MODAL STYLES ========== */
+.blog-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow-y: auto;
+}
+
+.blog-modal.show {
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #94A3B8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    color: #0F172A;
+}
+
+.modal-header {
+    margin-bottom: 32px;
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 24px;
+}
+
+.modal-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.modal-category {
+    background: #F0FFFE;
+    color: #0F766E;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-date {
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.modal-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.modal-author {
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-text {
+    color: #475569;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Modal Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 28px 20px;
+        max-height: 85vh;
+    }
+
+    .modal-close {
+        right: 12px;
+        top: 12px;
+        font-size: 28px;
+    }
+
+    .modal-title {
+        font-size: 24px;
+    }
+
+    .modal-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 20px 16px;
+        width: 95%;
+        max-height: 90vh;
+    }
+
+    .modal-header {
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+    }
+
+    .modal-close {
+        font-size: 24px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .modal-meta {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .modal-category {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .modal-text {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+}
+
 /* Responsive Media Queries */
 
 /* For tablets and smaller laptops */
@@ -311,6 +597,11 @@ it is a combination of flex-grow, flex-shrink and flex-basis
 
     .nav-links li a {
         font-size: 15px;
+    }
+
+    .blog-articles {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
     }
 }
 
@@ -330,6 +621,19 @@ it is a combination of flex-grow, flex-shrink and flex-basis
 
     .logo img {
         height: 35px;
+    }
+
+    .blog-articles {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .blog-card {
+        padding: 20px;
+    }
+
+    .blog-title {
+        font-size: 18px;
     }
 }
 
@@ -393,6 +697,38 @@ it is a combination of flex-grow, flex-shrink and flex-basis
 
     .footer-logo .logo {
         justify-content: center;
+    }
+
+    .blog-articles {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .blog-card {
+        padding: 16px;
+    }
+
+    .blog-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .blog-excerpt {
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+
+    .blog-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .blog-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
     }
 }
 
