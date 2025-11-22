@@ -1,68 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Go - Smart Automations</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- Navigation Bar -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - AI Go</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="images/Logo without type.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="logo">
-            <img src="images/logo.svg" alt="AI Go Logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="automate.html">Automate</a></li>
-            <li><a href="assistant.html">Assistant</a></li>
-            <li><a href="automations-list.html">Automations</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div class="logo">
+        <img src="images/Logo without type.png" alt="AI Go Logo" />
+        <a href="index.html">AI Go</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="automate.html">Automate</a></li>
+        <li><a href="assistant.html">Assistant</a></li>
+        <li><a href="automations-list.html">Automations</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
 
-    <!-- We add our content here guys -->
+    <main>
+      <section class="home-hero">
+        <h1 class="hero-title">Automations</h1>
+        <p class="hero-description">
+          Transform the way you work and live with AI-powered automation tools
+          that save time, reduce effort, and boost productivity.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="Learnmorebtn">Learn More</button>
+          <button class="Startbtn">Get Started</button>
+        </div>
+      </section>
+
+      <section class="features-section">
+        <div class="section-header">
+          <h2>Explore Our Features</h2>
+          <p>Discover powerful tools designed to make your life easier</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="icon-box">
+              <img src="images/Star.svg" class="homeIcon" alt="Assistant" />
+            </div>
+            <h3>Assistant</h3>
+            <p>
+              Your personal AI assistant ready to help with anything, anytime,
+              anywhere.
+            </p>
+            <a href="assistant.html" class="feature-btn">Explore Assistant</a>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-box">
+              <img src="images/Bolt.png" class="homeIcon" alt="Automate" />
+            </div>
+            <h3>Automate</h3>
+            <p>
+              Streamlines your daily tasks with intelligent automation tools
+              designed for productivity.
+            </p>
+            <a href="automate.html" class="feature-btn">Explore Automate</a>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-box">
+              <img src="images/Blog.png" class="homeIcon" alt="Blog" />
+            </div>
+            <h3>Blog</h3>
+            <p>
+              Discover insights, tips, and stories about automation and smart
+              living.
+            </p>
+            <a href="blog.html" class="feature-btn">Explore Blog</a>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slide-arrow left">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="slide-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <button class="slide-arrow right">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="stat-pill">
+          <h3>10K+</h3>
+          <p>Active Users</p>
+        </div>
+        <div class="stat-pill">
+          <h3>50K+</h3>
+          <p>Tasks Automated</p>
+        </div>
+        <div class="stat-pill">
+          <h3>99%</h3>
+          <p>Satisfaction Rate</p>
+        </div>
+      </section>
+      <p style="text-align: center; color: #64748b; margin-top: 10px">
+        The numbers are hypothetic
+      </p>
+
+      <div class="bottom-banner"></div>
+    </main>
+
     <footer>
-        <div class="footer-content">
-            <div class="footer-section footer-logo">
-                <div class="logo">
-                    <img src="images/logo_v2.svg" alt="AI Go Logo">
-                </div>
-                <p>Smart Automations for a Smarter Life.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="automate.html">Automate</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="automations-list.html">What Can Be Automated</a></li>
-                    <li><a href="assistant.html">AI Assistant</a></li>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>support@aigo.com</p>
-                <p>+1 (555) 123-4567</p>
-                <p>San Francisco, CA</p>
-                <a href="contact.html">Get in Touch →</a>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section footer-logo">
+          <div class="logo">
+            <img src="images/logo_v2.svg" alt="AI Go Logo" />
+            <span>AI Go</span>
+          </div>
+          <p>Smart Automations for a Smarter Life.</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 AI Go. All rights reserved. Built with ❤️ for a smarter future.</p>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="automate.html">Automate</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
         </div>
-     </footer>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="automations-list.html">What Can Be Automated</a></li>
+            <li><a href="assistant.html">AI Assistant</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>support@aigo.com</p>
+          <p>+1 (555) 123-4567</p>
+          <p>San Francisco, CA</p>
+          <a href="contact.html">Get in Touch →</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 AI Go. All rights reserved. Built with ❤️ for a smarter
+          future.
+        </p>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
