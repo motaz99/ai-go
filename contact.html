@@ -1,67 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - AI Go</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us - AI Go</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      if (typeof emailjs !== "undefined") {
+        emailjs.init({ publicKey: "XD7tY5nQat12vvSy6" });
+      } else {
+        setTimeout(arguments.callee, 100);
+      }
+    })();
+  </script>
 </head>
 <body>
-    <nav class="navbar">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.svg" alt="AI Go Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="automate.html">Automate</a></li>
+      <li><a href="assistant.html">Assistant</a></li>
+      <li><a href="automations-list.html">Automations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section class="contact-section">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-sub">Get in touch — we’d love to hear from you.</p>
+
+      <div class="contact-cards">
+        <div class="info-card">
+          <div class="icon">✉️</div>
+          <h4>Email</h4>
+          <p class="muted">support@aigo.com</p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon">📞</div>
+          <h4>Phone</h4>
+          <p class="muted">+9647710864256</p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon">📍</div>
+          <h4>Office</h4>
+          <p class="muted">Duhok, Kurdistan, Iraq</p>
+        </div>
+      </div>
+
+      <div class="form-wrap">
+        <h3>Send us a message</h3>
+
+        <form id="contactForm" novalidate>
+          <label>
+            <span class="label-text">Name *</span>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </label>
+
+          <label>
+            <span class="label-text">Email *</span>
+            <input id="email" name="email" type="email" placeholder="your.email@example.com" required />
+          </label>
+
+          <label>
+            <span class="label-text">Subject *</span>
+            <input id="subject" name="subject" type="text" placeholder="What is this about?" required />
+          </label>
+
+          <label>
+            <span class="label-text">Message *</span>
+            <textarea id="message" name="message" placeholder="Tell us more..." rows="6" required></textarea>
+          </label>
+
+          <button class="send-btn" type="submit" onclick="sendEmail(event)">✈️ Send Message</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section footer-logo">
         <div class="logo">
-            <img src="images/logo.svg" alt="AI Go Logo">
+          <img src="images/logo_v2.svg" alt="AI Go Logo" />
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="automate.html">Automate</a></li>
-            <li><a href="assistant.html">Assistant</a></li>
-            <li><a href="automations-list.html">Automations</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+        <p>Smart Automations for a Smarter Life.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="automate.html">Automate</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
-    </nav>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="automations-list.html">What Can Be Automated</a></li>
+          <li><a href="assistant.html">AI Assistant</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>support@aigo.com</p>
+        <p>+1 (555) 123-4567</p>
+        <p>San Francisco, CA</p>
+        <a href="contact.html">Get in Touch →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 AI Go. All rights reserved. Built with ❤️ for a smarter future.</p>
+    </div>
+  </footer>
 
-    <!-- We add our content here guys -->
-     <footer>
-        <div class="footer-content">
-            <div class="footer-section footer-logo">
-                <div class="logo">
-                    <img src="images/logo_v2.svg" alt="AI Go Logo">
-                </div>
-                <p>Smart Automations for a Smarter Life.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="automate.html">Automate</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="automations-list.html">What Can Be Automated</a></li>
-                    <li><a href="assistant.html">AI Assistant</a></li>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>support@aigo.com</p>
-                <p>+1 (555) 123-4567</p>
-                <p>San Francisco, CA</p>
-                <a href="contact.html">Get in Touch →</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 AI Go. All rights reserved. Built with ❤️ for a smarter future.</p>
-        </div>
-     </footer>
-
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="config/localConfig.js"></script>
 </body>
 </html>
